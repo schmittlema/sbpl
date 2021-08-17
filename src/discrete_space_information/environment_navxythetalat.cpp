@@ -809,10 +809,12 @@ bool EnvironmentNAVXYTHETALATTICE::ReadMotionPrimitives(FILE* fMotPrims)
     if (fscanf(fMotPrims, "%d", &dTemp) == 0) {
         return false;
     }
+    /*
     if (dTemp != EnvNAVXYTHETALATCfg.NumThetaDirs) {
         SBPL_ERROR("ERROR: invalid angular resolution %d angles (instead of %d angles) in the motion primitives file\n", dTemp, EnvNAVXYTHETALATCfg.NumThetaDirs);
         return false;
     }
+    */
     SBPL_PRINTF("numberofangles: %d\n", dTemp);
     EnvNAVXYTHETALATCfg.NumThetaDirs = dTemp;
 
